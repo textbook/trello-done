@@ -1,5 +1,10 @@
 # Trello Done
 
+[![License](https://img.shields.io/github/license/textbook/fauxauth.svg)](https://github.com/textbook/fauxauth/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/textbook/trello-done.svg?branch=master)](https://travis-ci.org/textbook/trello-done)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0b7cef1f215d4e35611e/maintainability)](https://codeclimate.com/github/textbook/trello-done/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0b7cef1f215d4e35611e/test_coverage)](https://codeclimate.com/github/textbook/trello-done/test_coverage)
+
 Mark Trello cards as done on IFTTT webhook hit.
 
 ## Environment
