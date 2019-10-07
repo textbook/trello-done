@@ -22,7 +22,7 @@ describe("trello-done", () => {
 		};
 	});
 
-	it("returns Accepted on success", () => {
+	it("returns OK on success", () => {
 		const scope = nock("https://api.trello.com")
 			.put(`/1/cards/${cardId}/dueComplete`)
 			.query({ ...credentials, value: true })
@@ -31,7 +31,7 @@ describe("trello-done", () => {
 		return request(app)
 			.post("/done")
 			.send({ card: `https://trello.com/c/${cardId}` })
-			.expect(202)
+			.expect(200)
 			.then(() => scope.done());
 	});
 

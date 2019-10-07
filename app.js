@@ -17,7 +17,7 @@ app.post("/done", (req, res) => {
 		const cardId = match[1];
 		console.log(`Updating card ${cardId}`);
 		return done(cardId)
-			.then(() => res.sendStatus(202))
+			.then(() => res.sendStatus(200))
 			.catch(() => res.sendStatus(500));
 	}
 	console.log(`No card URL in ${cardUrl}`);
