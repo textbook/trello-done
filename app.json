@@ -1,0 +1,25 @@
+{
+  "name": "Trello Done",
+  "description": "Mark Trello cards as done on IFTTT webhook hit",
+  "repository": "https://github.com/textbook/trello-done",
+  "env": {
+    "TRELLO_API_KEY": {
+      "description": "API key for Trello, see https://trello.com/app-key"
+    },
+    "TRELLO_API_TOKEN": {
+      "description": "API token for Trello, see https://stackoverflow.com/a/19486891/3001761"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "keywords": [
+    "trello",
+    "integration",
+    "webhook",
+    "ifttt"
+  ],
+  "stack": "heroku-18"
+}

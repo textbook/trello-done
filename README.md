@@ -28,3 +28,13 @@ curl \
     -H 'Content-Type: application/json' \
     -d '{"card": "https://trello.com/c/<your card ID>"}'
 ```
+
+## Deployment
+
+If you have the [CF CLI] installed, you can deploy to [Cloud Foundry] with a
+`cf push`. Alternatively, click the button below to deploy to Heroku:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/textbook/trello-done)
+
+[CF CLI]: https://docs.cloudfoundry.org/cf-cli/
+[Cloud Foundry]: https://www.cloudfoundry.org/
