@@ -1,0 +1,25 @@
+{
+  "name": "trello-done",
+  "version": "1.0.0",
+  "description": "Mark Trello cards as done on IFTTT webhook hit",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/textbook/trello-done.git"
+  },
+  "keywords": [
+    "trello",
+    "integration",
+    "webhook",
+    "ifttt"
+  ],
+  "author": "Jonathan Sharpe <mail@jonrshar.pe>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/textbook/trello-done/issues"
+  },
+  "homepage": "https://github.com/textbook/trello-done#readme"
+}
