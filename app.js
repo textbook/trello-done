@@ -1,10 +1,12 @@
 const express = require("express");
+const morgan = require("morgan");
 
 const { done } = require("./trello");
 
 const app = express();
 
 app.use(express.json());
+app.use(morgan("dev"));
 
 const CARD_URL_REGEX = /\/c\/([\w\d]+)/;
 
