@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "lint": "eslint .",
+    "ship": "npm run lint && npm run test",
     "start": "node $npm_package_main",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -33,15 +35,20 @@
   },
   "devDependencies": {
     "@codeyourfuture/eslint-config-standard": "^2.0.1",
-    "eslint": "^6.5.1"
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-plugin-jest": "^22.17.0",
+    "jest": "^24.9.0",
+    "nock": "^11.4.0",
+    "supertest": "^4.0.2"
   },
   "eslintConfig": {
     "env": {
       "node": true
     },
-    "extends": ["@codeyourfuture/standard"],
-    "parserOptions": {
-      "ecmaVersion": 6
-    }
+    "extends": [
+      "@codeyourfuture/standard"
+    ],
+    "parser": "babel-eslint"
   }
 }
