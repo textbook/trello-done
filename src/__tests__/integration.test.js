@@ -1,11 +1,5 @@
-const axios = require("axios");
 const nock = require("nock");
 const request = require("supertest");
-
-// See https://www.npmjs.com/package/nock#axios
-axios.defaults.adapter = require("axios/lib/adapters/http");
-
-const app = require("../app");
 
 const credentials = {
 	key: "h8L5jui72RLnUo1k",
@@ -13,13 +7,16 @@ const credentials = {
 };
 
 describe("trello-done", () => {
+	let app;
 	const cardId = "abc123";
 
 	beforeEach(() => {
+		jest.resetModules();
 		global.process.env = {
 			TRELLO_API_KEY: credentials.key,
 			TRELLO_API_TOKEN: credentials.token,
 		};
+		app = require("../app");
 	});
 
 	it("returns OK on success", () => {
