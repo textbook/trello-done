@@ -2,7 +2,7 @@
   "name": "trello-done",
   "version": "1.0.0",
   "description": "Mark Trello cards as done on IFTTT webhook hit",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "lint": "eslint .",
     "ship": "npm run lint && npm run test",
