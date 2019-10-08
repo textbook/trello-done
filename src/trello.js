@@ -1,6 +1,8 @@
 const axios = require("axios");
 
-const client = axios.create();
+const client = axios.create({
+	baseURL: "https://api.trello.com/1",
+});
 
 module.exports = {
 	done: (cardId) => client.request({
@@ -10,6 +12,6 @@ module.exports = {
 			token: process.env.TRELLO_API_TOKEN,
 			value: true,
 		},
-		url: `https://api.trello.com/1/cards/${cardId}/dueComplete`,
+		url: `/cards/${cardId}/dueComplete`,
 	}),
 };
