@@ -7,13 +7,43 @@
 
 Mark Trello cards as done on IFTTT webhook hit.
 
+## Deployment
+
+If you have the [CF CLI] installed, you can deploy to a [Cloud Foundry] (e.g.
+[PWS]) with a `cf push`. Alternatively, click the button below to deploy to
+Heroku:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/textbook/trello-done)
+
 ## Environment
 
 Requires the following two environment variables:
 
-  - `TRELLO_API_KEY`: API key from https://trello.com/app-key
-  - `TRELLO_API_TOKEN`: API token with write permissions (see e.g.
-    https://stackoverflow.com/a/19486891/3001761 for how to generate this)
+  - `TRELLO_API_KEY`: API key for Trello, see https://trello.com/app-key
+  - `TRELLO_API_TOKEN`: API token for Trello, see https://stackoverflow.com/a/19486891/3001761
+
+## IFTTT
+
+The other part of the equation is configuring [If This Then That] to hit the
+webhook when a card is moved to a specific list in a Trello board. You will
+need to set up the Trello connection in IFTTT, then head to [create] to create
+your new service. Fill in the following trigger ("This") and action ("That").
+
+### This - Trello: Card added to list
+
+| Field        | Value                     |
+| ------------ | ------------------------- |
+| Which board? | Select the board          |
+| List name    | Type the name of the list |
+
+### That - Webhooks: Make a web request
+
+| Field        | Value                     |
+| ------------ | ------------------------- |
+| URL          | `<your service URL>/done` |
+| Method       | `POST`                    |
+| Content Type | `application/json`        |
+| Body         | `{"card": "{{CardURL}}"}` |
 
 ## API
 
@@ -29,12 +59,7 @@ curl \
     -d '{"card": "https://trello.com/c/<your card ID>"}'
 ```
 
-## Deployment
-
-If you have the [CF CLI] installed, you can deploy to [Cloud Foundry] with a
-`cf push`. Alternatively, click the button below to deploy to Heroku:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/textbook/trello-done)
-
+[If This Then That]: https://ifttt.com
 [CF CLI]: https://docs.cloudfoundry.org/cf-cli/
 [Cloud Foundry]: https://www.cloudfoundry.org/
+[create]: https://ifttt.com/create
