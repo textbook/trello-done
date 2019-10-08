@@ -59,7 +59,8 @@ curl \
     -d '{"card": "https://trello.com/c/<your card ID>"}'
 ```
 
-[If This Then That]: https://ifttt.com
 [CF CLI]: https://docs.cloudfoundry.org/cf-cli/
 [Cloud Foundry]: https://www.cloudfoundry.org/
 [create]: https://ifttt.com/create
+[If This Then That]: https://ifttt.com
+[PWS]: https://run.pivotal.io
