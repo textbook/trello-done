@@ -1,7 +1,9 @@
 const axios = require("axios");
 
+const client = axios.create();
+
 module.exports = {
-	done: (cardId) => axios.request({
+	done: (cardId) => client.request({
 		method: "PUT",
 		params: {
 			key: process.env.TRELLO_API_KEY,
