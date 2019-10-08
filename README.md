@@ -15,6 +15,11 @@ Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/textbook/trello-done)
 
+**Note** that the App name on Heroku is part of `<your service URL>`, so you
+should make it hard to guess (not just `trello-done`!) For example, you can
+use a site like https://www.browserling.com/tools/random-hex to generate a
+random hash and include that in the name, e.g. `trello-done-0123456789abcdef`.
+
 ## Environment
 
 Requires the following two environment variables:
