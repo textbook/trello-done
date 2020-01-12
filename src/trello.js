@@ -1,9 +1,6 @@
 const axios = require("axios");
 
 const client = axios.create({
-	// force Node default to allow Nock usage with Jest
-	// See https://www.npmjs.com/package/nock#axios
-	adapter: require("axios/lib/adapters/http"),
 	baseURL: "https://api.trello.com/1",
 	params: {
 		key: process.env.TRELLO_API_KEY,

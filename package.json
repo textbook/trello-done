@@ -52,5 +52,8 @@
       "@codeyourfuture/standard"
     ],
     "parser": "babel-eslint"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
