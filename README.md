@@ -7,6 +7,31 @@
 
 Mark Trello cards as done on IFTTT webhook hit.
 
+## Alternatives
+
+Since I wrote this, [Trello Butler] has come along and replaced it. Here's how
+to set up the same logic in that.
+
+  - First, click the Butler button on your board:
+
+    [![Trello "Butler" button in board][1]][1]
+
+  - Then, select the Rules tab and click the Create Rule button:
+
+    [![Butler modal showing Rules tab][2]][2]
+
+  - Next, select and add the appropriate Card Move trigger - *"when a card is
+    moved into {list name} by anyone"*:
+
+    [![Create a rule - add a Card Move trigger][3]][3]
+
+  - Finally, select and add the appropriate Dates action - *"mark the due date
+    as complete"*:
+
+    [![Create a rule - add a Date action][4]][4]
+
+Click Save to create the rule
+
 ## Deployment
 
 If you have the [CF CLI] installed, you can deploy to a [Cloud Foundry] (e.g.
@@ -69,3 +94,9 @@ curl \
 [create]: https://ifttt.com/create
 [If This Then That]: https://ifttt.com
 [PWS]: https://run.pivotal.io
+[Trello Butler]: https://help.trello.com/article/1198-an-intro-to-butler
+
+[1]: assets/trello-butler-button.png
+[2]: assets/trello-butler-create-rule.png
+[3]: assets/trello-butler-select-trigger.png
+[4]: assets/trello-butler-select-action.png
