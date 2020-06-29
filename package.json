@@ -41,7 +41,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-jest": "^23.17.1",
     "jest": "^26.1.0",
-    "nock": "^12.0.3",
+    "nock": "^13.0.0",
     "supertest": "^4.0.2"
   },
   "eslintConfig": {
